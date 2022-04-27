@@ -14,7 +14,7 @@ const counterValue = {
     },
     decrement() {
         if (this.value !== 0) {
-                this.value -= 1;
+            this.value -= 1;
         }
         return this.value;
     }
