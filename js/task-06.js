@@ -12,11 +12,13 @@ input.addEventListener('blur',onInputFocus);
 
 function onInputFocus(event) {
     
-    if (event.currentTarget.value.length != input.dataset.length) {
-        return input.classList.add('invalid');
+    if (event.currentTarget.value.length == input.dataset.length) {
+        return input.classList.add('valid') || input.classList.remove('invalid') ;
     }
+    return input.classList.replace('valid','invalid');
     
-    return input.classList.replace('invalid', 'valid');
-
-}
+        
+    
+   
+};
 
