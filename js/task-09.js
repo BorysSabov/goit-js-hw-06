@@ -10,9 +10,8 @@ function getRandomHexColor() {
   bgcolor: document.querySelector('.widget'),
   colorName: document.querySelector('.color'),
 };
-console.log(refs);
-refs.btnClick.addEventListener('click', onClickChange);
-function onClickChange () {
-  refs.bgcolor.style.backgroundColor = getRandomHexColor();
-  refs.colorName.textContent = getRandomHexColor();
+refs.btnClick.addEventListener('click', onClickChangeBgcolor);
+function onClickChangeBgcolor (event) {
+  event = refs.bgcolor.style.backgroundColor = getRandomHexColor();
+  refs.colorName.textContent = event
 };

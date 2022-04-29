@@ -4,19 +4,18 @@
 // отображаться строка "Anonymous".
 
   const refs = {
-    input: document.querySelector('input#name-input'),
-    nameLabel: document.querySelector('span#name-output'),
+    inputEl: document.querySelector('input#name-input'),
+    nameLabelEl: document.querySelector('span#name-output'),
 };
 
-refs.input.addEventListener('input', (event) => {
-    if (event !== '') {
-        refs.nameLabel.textContent = event.currentTarget.value;
-        
-    } else {
-        refs.nameLabel.textContent.add('Anonymous');
-    };
-});
+refs.inputEl.addEventListener('input', OnInputChange);
 
-// Как без обновления страницы 
-// добиться возвращения слова Anonymous? 
-// Пробовал с length, но не пойму как его применить.
+function OnInputChange(event) { 
+    refs.nameLabelEl.textContent = event.currentTarget.value;
+    if (event.currentTarget.value  === '') {
+        refs.nameLabelEl.textContent = 'Anonymous';  
+    } 
+};
+
+
+

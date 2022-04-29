@@ -13,11 +13,9 @@ const counterValue = {
         this.value += 1;
     },
     decrement() {
-        if (this.value !== 0) {
-            this.value -= 1;
-        }
-        return this.value;
+        this.value -= 1;
     }
+    
 };
 
 const counterValueEl = document.querySelector('#value');
